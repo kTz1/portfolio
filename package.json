@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@svgr/webpack": "^8.1.0",
+    "caniuse-lite": "^1.0.30001696",
     "framer-motion": "^11.3.21",
     "next": "^15.1.6",
     "react": "^18",

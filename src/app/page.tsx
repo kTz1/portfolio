@@ -3,7 +3,8 @@ import { Hero } from "@/sections/Hero";
 import { Projects } from "@/sections/Projects";
 import { Tape } from "@/sections/Tape";
 import { Testimonials } from "@/sections/Testimonials";
-import {About} from "@/sections/About";
+import { About } from "@/sections/About";
+import { Contact } from "@/sections/Contact";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Tape />
       <Testimonials />
       <About />
+      <Contact />
     </div>
   );
 }

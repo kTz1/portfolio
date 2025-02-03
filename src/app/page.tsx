@@ -1,3 +1,6 @@
+"use client";
+
+import { useRef } from "react";
 import { Header } from "@/sections/Header";
 import { Hero } from "@/sections/Hero";
 import { Projects } from "@/sections/Projects";

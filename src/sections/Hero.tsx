@@ -8,7 +8,10 @@ import { HeroOrbit } from "@/components/HeroOrbit";
 
 export const Hero = () => {
   return (
-    <div className="py-32 md:py-48 lg:py-60 relative z-0 overflow-x-clip">
+    <div
+      className="py-32 md:py-48 lg:py-60 relative z-0 overflow-x-clip"
+      id="home"
+    >
       <div className="absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_70%,transparent)]">
         {/* background image */}
         <div

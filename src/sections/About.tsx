@@ -1,5 +1,6 @@
 "use client";
 
+import { useRef } from "react";
 import { SectionHeader } from "@/components/SectionHeader";
 import { Card } from "@/components/Card";
 import bookImage from "@/assets/images/book-cover.png";
@@ -15,7 +16,6 @@ import smileMemoji from "@/assets/images/memoji-smile.png";
 import { CardHeader } from "@/components/CardHeader";
 import { ToolboxItems } from "@/components/ToolboxItems";
 import { motion } from "framer-motion";
-import { useRef } from "react";
 
 const toolboxItems = [
   {
@@ -91,8 +91,9 @@ const hobbies = [
 
 export const About = () => {
   const constraintRef = useRef(null);
+
   return (
-    <div className="py-20 lg:py-28">
+    <div className="py-20 lg:py-28 scroll-smooth" id="about">
       <div className="container">
         <SectionHeader
           eyebrow="About me"

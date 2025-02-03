@@ -23,7 +23,7 @@ export const Tape = () => {
           <div className="flex flex-none gap-4 pr-4 py-3 animate-move-left [animation-duration:30s]">
             {/* duplicates the words in the array for infinite animation */}
             {[
-              ...new Array(2).fill(0).map((_, index) => (
+              [...new Array(2)].fill(0).map((_, index) => (
                 <Fragment key={index}>
                   {words.map((word) => (
                     <div key={word} className="inline-flex gap-4 items-center">

@@ -132,10 +132,18 @@ export const Hero = () => {
         </div>
 
         <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">
-          <button className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl mt-4">
+          <button
+            className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl mt-4"
+            onClick={() =>
+              document
+                .getElementById("projects")
+                ?.scrollIntoView({ behavior: "smooth" })
+            }
+          >
             <span className="font-semibold">Explore My Word</span>
-            <ArrowDown className="size-4" />
+            <ArrowDown className="size-4 animate-bounce" />
           </button>
+
           <button className="inline-flex items-center gap-2 border border-white bg-white text-gray-900 h-12 px-6 rounded-xl mt-4">
             <span>👋</span>
             <span className="font-semibold">Let's Connect</span>

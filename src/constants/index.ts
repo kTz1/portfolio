@@ -1,3 +1,5 @@
+import ycdirectoryStartup from "@/assets/images/yc-directory.png";
+import imaginifySaasPlatform from "@/assets/images/imaginify.png";
 import animatedLandingPage from "@/assets/images/animated-website.png";
 import hoobankLandingPage from "@/assets/images/hoobank.png";
 import xoraLandingPage from "@/assets/images/xora.png";
@@ -15,11 +17,33 @@ import memojiAvatar5 from "@/assets/images/memoji-avatar-5.png";
 
 export const portfolioProjects = [
   {
+    company: "YC Directory",
+    year: "2025",
+    title: "YC Directory - Startup",
+    description:
+      "This project showcases the latest features of Next.js 15, including Next.js Form for seamless client-side form submissions, Unstable After for background tasks, Server Component HMR Cache for faster development, and Partial Prerendering for performance optimization.",
+    link: "https://yc-directory-zeta-pied.vercel.app/",
+    code: "https://github.com/kTz1/yc_directory",
+    image: ycdirectoryStartup,
+  },
+  {
+    company: "Imaginify",
+    year: "2024",
+    title: "Imaginify - AI image SaaS Platform ",
+    description:
+      "✨ AI image SaaS platform that excels in image processing capabilities, integrates a secure payment infrastructure, offers advanced image search functionalities, and supports multiple AI features, including image restoration, recoloring, object removal, generative filling, and background removal.",
+    link: "https://imaginify-lemon-eight.vercel.app/",
+    code: "https://github.com/kTz1/imaginify",
+    image: imaginifySaasPlatform,
+  },
+  {
     company: "Zentry",
     year: "2025",
-    title: "Animated Landing Page",
-    description: "Animated landing page for gaming that use gsap and react",
+    title: "Zentry - Landing Page",
+    description:
+      "A visually captivating website inspired by Zentry, featuring scroll-triggered animations and geometric transitions, and engaging video storytelling. Modern feel, focusing on engaging UI/UX and smooth responsiveness.",
     link: "https://animated-website.catalinsimon.com/",
+    code: "https://github.com/kTz1/animated-website",
     image: animatedLandingPage,
   },
   {
@@ -29,14 +53,16 @@ export const portfolioProjects = [
     description:
       "Xora is a Modern UI/UX SaaS website developed using React.js and Tailwind CSS that exemplifies modern UI/UX principles. Its sleek design, seamless animations, and overall user experience set a high standard, serving as a reference or inspiration for future modern applications or websites in general.",
     link: "https://saas-landing-page.catalinsimon.com/",
+    code: "https://github.com/kTz1/saas_landing-page",
     image: xoraLandingPage,
   },
   {
     company: "HooBank",
     year: "2023",
-    title: "Next Generation Payment Method - Landing Page",
+    title: "Hoobank - Landing Page",
     description: "Modern UI/UX website using React.js & Tailwind CSS",
     link: "https://hoobank-app22.netlify.app/",
+    code: "https://github.com/kTz1/project_hoobank",
     image: hoobankLandingPage,
   },
 ];

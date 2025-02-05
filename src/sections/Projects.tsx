@@ -7,7 +7,7 @@ import { Card } from "@/components/Card";
 
 export const Projects = () => {
   return (
-    <section className="pb-16 lg:py-24" id="projects">
+    <section className="pb-16 lg:py-24 mt-32 lg:mt-26" id="projects">
       <div className="container">
         <SectionHeader
           eyebrow="Real-world Results"
@@ -40,17 +40,7 @@ export const Projects = () => {
                   <p className="flex flex-col gap-4 mt-4 md:mt-5">
                     {project.description}
                   </p>
-                  {/*<ul className="flex flex-col gap-4 mt-4 md:mt-5">
-                    {project.results.map((result) => (
-                      <li
-                        key={result.title}
-                        className="flex gap-2 text-sm md:text-base text-white/50"
-                      >
-                        <CheckCircleIcon className="size-5 md:size-6" />
-                        <span>{result.title}</span>
-                      </li>
-                    ))}
-                  </ul>*/}
+
                   <a href={project.link} target="_blank" rel="noreferrer">
                     <button className="bg-white text-gray-900 h-12 w-full md:w-auto px-6 rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8">
                       <span className="">Visit Live Site</span>
@@ -69,7 +59,7 @@ export const Projects = () => {
                   <Image
                     src={project.image}
                     alt={project.title}
-                    className="mt-8 -mb-4 md:-mb-0 lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none rounded-3xl"
+                    className="mt-8 -mb-4 md:-mb-0 lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none rounded-3xl lg:object-cover"
                   />
                 </div>
               </div>

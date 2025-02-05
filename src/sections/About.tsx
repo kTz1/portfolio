@@ -17,7 +17,7 @@ export const About = () => {
   const constraintRef = useRef(null);
 
   return (
-    <div className="py-20 lg:py-28 scroll-smooth" id="about">
+    <div className="py-20 lg:py-28" id="about">
       <div className="container">
         <SectionHeader
           eyebrow="About me"

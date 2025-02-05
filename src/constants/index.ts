@@ -31,7 +31,7 @@ export const portfolioProjects = [
     year: "2024",
     title: "Imaginify - AI image SaaS Platform ",
     description:
-      "✨ AI image SaaS platform that excels in image processing capabilities, integrates a secure payment infrastructure, offers advanced image search functionalities, and supports multiple AI features, including image restoration, recoloring, object removal, generative filling, and background removal.",
+      "AI image SaaS platform that excels in image processing capabilities, integrates a secure payment, offers advanced image search functionalities, and supports multiple AI features, including image restoration, recoloring, object removal, generative filling, and background removal.",
     link: "https://imaginify-lemon-eight.vercel.app/",
     code: "https://github.com/kTz1/imaginify",
     image: imaginifySaasPlatform,
@@ -51,7 +51,7 @@ export const portfolioProjects = [
     year: "2024",
     title: "Xora - Saas Landing Page",
     description:
-      "Xora is a Modern UI/UX SaaS website developed using React.js and Tailwind CSS that exemplifies modern UI/UX principles. Its sleek design, seamless animations, and overall user experience set a high standard, serving as a reference or inspiration for future modern applications or websites in general.",
+      "Xora is a Modern UI/UX SaaS website developed using React.js and Tailwind CSS that exemplifies modern UI/UX principles.",
     link: "https://saas-landing-page.catalinsimon.com/",
     code: "https://github.com/kTz1/saas_landing-page",
     image: xoraLandingPage,

@@ -37,7 +37,7 @@ export const Projects = () => {
                   </h3>
 
                   <hr className="border-t-2 border-white/5 mt-4 md:mt-5" />
-                  <p className="flex flex-col gap-4 mt-4 md:mt-5 lg:h-32 ">
+                  <p className="flex flex-col gap-4 mt-4 md:mt-5 lg:h-32 overflow-ellipsis">
                     {project.description}
                   </p>
 

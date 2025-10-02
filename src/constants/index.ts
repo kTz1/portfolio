@@ -125,8 +125,8 @@ export const toolboxItems = [
   {
     title: "HTML5",
     iconType: HtmlIcon,
-    left: "10%",
-    top: "45%",
+    left: "25%",
+    top: "60%",
   },
   {
     title: "CSS3",

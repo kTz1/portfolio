@@ -109,19 +109,6 @@ export const Hero = () => {
       {/* content */}
       <div className="container">
         <div className="flex flex-col items-center">
-          {/*<Image src={memojiImage} alt="memoji" className="size-[100px]" />
-          
-          
-            <div className="bg-gray-950 border border-gray-800 px-4 py-1.5 inline-flex items-center gap-4 rounded-lg">
-              
-              <div className="bg-green-500 size-2.5 rounded-full relative">
-                <div className="bg-green-500 absolute inset-0 rounded-full animate-ping-large"></div>
-              </div>
-              <div className="text-sm font-medium">
-                Available for new projects
-              </div>
-            </div>*/}
-
           <span className="font-serif text-3xl md:text-5xl text-center mt-8 tracking-wide">
             Hi there, I&apos;m -
           </span>
@@ -131,9 +118,6 @@ export const Hero = () => {
         </div>
 
         <div className="max-w-lg mx-auto">
-          {/*<h1 className="font-serif text-3xl md:text-5xl text-center mt-8 tracking-wide">
-            Building Exceptional User Experiences
-          </h1>*/}
           <p className="mt-4 text-center text-white/60 md:text-lg">
             <b>Self-taught developer</b> and <b>freelancer</b> with a strong
             passion for learning and building practical solutions.

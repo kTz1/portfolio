@@ -1,14 +1,22 @@
 import ycdirectoryStartup from "@/assets/images/yc-directory.png";
 import imaginifySaasPlatform from "@/assets/images/imaginify.png";
+import vibeSaasPlatform from "@/assets/images/vibe.png";
 import animatedLandingPage from "@/assets/images/animated-website.png";
 import hoobankLandingPage from "@/assets/images/hoobank.png";
 import xoraLandingPage from "@/assets/images/xora.png";
 import JavaScriptIcon from "@/assets/icons/square-js.svg";
+import TypescriptIcon from "@/assets/icons/typescript.svg";
+import NextjsIcon from "@/assets/icons/nextjs.svg";
+import ReactIcon from "@/assets/icons/react.svg";
+import ReduxIcon from "@/assets/icons/redux.svg";
+import NodejsIcon from "@/assets/icons/nodejs.svg";
 import HtmlIcon from "@/assets/icons/html5.svg";
 import CssIcon from "@/assets/icons/css3.svg";
-import ReactIcon from "@/assets/icons/react.svg";
+import TailwindcssIcon from "@/assets/icons/tailwindcss.svg";
+import SassIcon from "@/assets/icons/sass.svg";
 import ChromeIcon from "@/assets/icons/chrome.svg";
 import GithubIcon from "@/assets/icons/github.svg";
+import GitIcon from "@/assets/icons/git.svg";
 import memojiAvatar1 from "@/assets/images/memoji-avatar-1.png";
 import memojiAvatar2 from "@/assets/images/memoji-avatar-2.png";
 import memojiAvatar3 from "@/assets/images/memoji-avatar-3.png";
@@ -16,6 +24,26 @@ import memojiAvatar4 from "@/assets/images/memoji-avatar-4.png";
 import memojiAvatar5 from "@/assets/images/memoji-avatar-5.png";
 
 export const portfolioProjects = [
+  {
+    company: "Vibe",
+    year: "2025",
+    title: "Vibe - Build something with AI",
+    description:
+      "Vibe - an AI powered app using React.js 19 + Next.js 15, Tailwind CSS v4 + Shadcn/ui, OpenAI API, tRPC for full-stack type safety, Inngest background jobs and agent toolkit, Clerk for authentication and billing, E2B cloud sandboxes for runtime execution.",
+    link: "https://saas-app-ten-henna.vercel.app/",
+    code: "https://github.com/kTz1/saas-app",
+    image: vibeSaasPlatform,
+  },
+  {
+    company: "Imaginify",
+    year: "2024",
+    title: "Imaginify - AI image SaaS Platform ",
+    description:
+      "AI image SaaS platform, offers image restoration, recoloring, object removal, generative filling, and background removal.",
+    link: "https://imaginify-mu-beryl.vercel.app",
+    code: "https://github.com/kTz1/imaginify",
+    image: imaginifySaasPlatform,
+  },
   {
     company: "YC Directory",
     year: "2025",
@@ -25,16 +53,6 @@ export const portfolioProjects = [
     link: "https://yc-directory-zeta-pied.vercel.app/",
     code: "https://github.com/kTz1/yc_directory",
     image: ycdirectoryStartup,
-  },
-  {
-    company: "Imaginify",
-    year: "2024",
-    title: "Imaginify - AI image SaaS Platform ",
-    description:
-      "AI image SaaS platform that excels in image processing capabilities, integrates a secure payment, offers advanced image search functionalities, and supports multiple AI features, including image restoration, recoloring, object removal, generative filling, and background removal.",
-    link: "https://imaginify-lemon-eight.vercel.app/",
-    code: "https://github.com/kTz1/imaginify",
-    image: imaginifySaasPlatform,
   },
   {
     company: "Zentry",
@@ -71,26 +89,80 @@ export const toolboxItems = [
   {
     title: "JavaScript",
     iconType: JavaScriptIcon,
+    left: "5%",
+    top: "5%",
   },
   {
-    title: "HTML5",
-    iconType: HtmlIcon,
+    title: "Typescript",
+    iconType: TypescriptIcon,
+    left: "50%",
+    top: "5%",
   },
   {
-    title: "CSS3",
-    iconType: CssIcon,
+    title: "Next.js",
+    iconType: NextjsIcon,
+    left: "35%",
+    top: "40%",
   },
   {
     title: "React",
     iconType: ReactIcon,
+    left: "10%",
+    top: "35%",
+  },
+  {
+    title: "Redux",
+    iconType: ReduxIcon,
+    left: "70%",
+    top: "45%",
+  },
+  {
+    title: "Nodejs",
+    iconType: NodejsIcon,
+    left: "80%",
+    top: "25%",
+  },
+  {
+    title: "HTML5",
+    iconType: HtmlIcon,
+    left: "10%",
+    top: "45%",
+  },
+  {
+    title: "CSS3",
+    iconType: CssIcon,
+    left: "90%",
+    top: "10%",
+  },
+  {
+    title: "Tailwindcss",
+    iconType: TailwindcssIcon,
+    left: "50%",
+    top: "50%",
+  },
+  {
+    title: "Sass",
+    iconType: SassIcon,
+    left: "30%",
+    top: "20%",
   },
   {
     title: "Chrome",
     iconType: ChromeIcon,
+    left: "15%",
+    top: "45%",
   },
   {
     title: "Github",
     iconType: GithubIcon,
+    left: "70%",
+    top: "80%",
+  },
+  {
+    title: "Git",
+    iconType: GitIcon,
+    left: "70%",
+    top: "70%",
   },
 ];
 

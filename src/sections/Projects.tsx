@@ -7,7 +7,7 @@ import { Card } from "@/components/Card";
 
 export const Projects = () => {
   return (
-    <section className="pb-16 lg:py-24 mt-32 lg:mt-26" id="projects">
+    <section className="pb-16 lg:py-24 lg:mt-26 mt-20" id="projects">
       <div className="container">
         <SectionHeader
           eyebrow="Real-world Results"
@@ -19,7 +19,7 @@ export const Projects = () => {
           {portfolioProjects.map((project, projectIndex) => (
             <Card
               key={project.title}
-              className="px-8 pt-8 pb-0 md:pt-12 md:px-10 lg:pt-16 lg:px-20 sticky"
+              className="px-8 pt-8 pb-0 md:pt-12 md:px-10 lg:pt-16 lg:px-20 sticky "
               style={{
                 top: `calc(64px + ${projectIndex * 40}px)`,
               }}
@@ -32,18 +32,18 @@ export const Projects = () => {
                     <span>{project.year}</span>
                   </div>
 
-                  <h3 className="font-serif text-2xl mt-2 md:mt-5  md:text-4xl">
+                  <h3 className="font-serif text-2xl mt-2 md:mt-5 md:text-4xl">
                     {project.title}
                   </h3>
 
                   <hr className="border-t-2 border-white/5 mt-4 md:mt-5" />
-                  <p className="flex flex-col gap-4 mt-4 md:mt-5">
+                  <p className="flex flex-col gap-4 mt-4 md:mt-5 lg:h-32 ">
                     {project.description}
                   </p>
 
                   <a href={project.link} target="_blank" rel="noreferrer">
                     <button className="bg-white text-gray-900 h-12 w-full md:w-auto px-6 rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8">
-                      <span className="">Visit Live Site</span>
+                      <span className="">Website</span>
                       <ArrowUpRight className="size-4" />
                     </button>
                   </a>
@@ -55,7 +55,7 @@ export const Projects = () => {
                   </a>
                 </div>
 
-                <div className="relative">
+                <div className="relative lg:min-h-72">
                   <Image
                     src={project.image}
                     alt={project.title}

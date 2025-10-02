@@ -1,6 +1,6 @@
-import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
-import grainImage from "@/assets/images/grain.jpg";
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
+import grainImage from "@/assets/images/grain.jpg";
 
 export const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -16,8 +16,6 @@ export const Contact = () => {
     if (error) setError("");
   };
 
-  const handleSubmit = () => {};
-
   const validateForm = () => {
     if (!form.name.trim()) return "Name is required.";
     if (!form.email.trim()) return "Email is required.";
@@ -25,6 +23,51 @@ export const Contact = () => {
       return "Invalid email address.";
     if (!form.message.trim()) return "Message is required.";
     return "";
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    const validationError = validateForm();
+    if (validationError) {
+      setError(validationError);
+      return;
+    }
+    setLoading(true);
+    setError("");
+    setSuccess("");
+    try {
+      if (
+        !process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID ||
+        !process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID ||
+        !process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+      ) {
+        throw new Error(error);
+      }
+
+      // Create template parameters
+      const templateParams = {
+        from_name: form.name,
+        email: form.email,
+        message: form.message,
+        to_name: "Catalin",
+      };
+
+      const res = await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+        templateParams,
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+      );
+
+      if (!res) throw new Error("Failed to send message!");
+      setSuccess("Message sent successfully!");
+      setForm({ name: "", email: "", message: "" });
+    } catch (error) {
+      setError("Failed to send message. Please try again later.");
+    } finally {
+      setLoading(false);
+      alert("Thank you. I will get back to you as soon as possible.");
+    }
   };
 
   return (
@@ -51,16 +94,9 @@ export const Contact = () => {
           </div>
         </div>
 
-        {/*<div>
-          <button className="text-white bg-gray-900 inline-flex items-center px-6 h-12 rounded-xl gap-2 mt-8 w-max border border-gray-900">
-            <span className="font-semibold">Contact Me</span>
-            <ArrowUpRightIcon className="size-4" />
-          </button>
-        </div>*/}
-
         <form
           onSubmit={handleSubmit}
-          className="space-y-6 max-w-2xl mx-auto mt-8 p-8 rounded-lg shadow-2xl"
+          className="space-y-6 max-w-2xl mx-auto mt-8 p-8 rounded-3xl shadow-2xl bg-gray-800"
           aria-label="Contact form"
         >
           <div>
@@ -77,7 +113,8 @@ export const Contact = () => {
               required
               aria-required="true"
               aria-invalid={!!error && !form.name}
-              className="w-full px-4 py-2 bg-white/10 border border-gray-600 rounded-lg text-black placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:border-transparent transition-colors"
+              placeholder="John Doe"
+              className="w-full px-4 py-2 bg-white border border-gray-600 rounded-lg text-black placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:border-transparent transition-colors"
             />
           </div>
           <div>
@@ -97,7 +134,8 @@ export const Contact = () => {
                 !!error &&
                 (!form.email || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(form.email))
               }
-              className="w-full px-4 py-2 bg-white/10 border border-gray-600 rounded-lg text-black placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:border-transparent transition-colors"
+              placeholder="johndoe@email.com"
+              className="w-full px-4 py-2 bg-white border border-gray-600 rounded-lg text-black placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:border-transparent transition-colors"
             />
           </div>
           <div>
@@ -113,7 +151,8 @@ export const Contact = () => {
               required
               aria-required="true"
               aria-invalid={!!error && !form.message}
-              className="w-full px-4 py-2 bg-white/10 border border-gray-600 rounded-lg text-black placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:border-transparent transition-colors resize-none"
+              placeholder="Your message here..."
+              className="w-full px-4 py-2 bg-white border border-gray-600 rounded-lg text-black placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:border-transparent transition-colors resize-none"
             />
           </div>
 

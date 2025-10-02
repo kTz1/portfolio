@@ -21,7 +21,7 @@ export const Projects = () => {
               key={project.title}
               className="px-8 pt-8 pb-0 md:pt-12 md:px-10 lg:pt-16 lg:px-20 sticky "
               style={{
-                top: `calc(64px + ${projectIndex * 40}px)`,
+                top: `calc(64px + ${projectIndex * 20}px)`,
               }}
             >
               <div className="lg:grid lg:grid-cols-2 lg:gap-16">
@@ -59,6 +59,7 @@ export const Projects = () => {
                   <Image
                     src={project.image}
                     alt={project.title}
+                    loading="lazy"
                     className="mt-8 -mb-4 md:-mb-0 lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none rounded-3xl lg:object-cover"
                   />
                 </div>

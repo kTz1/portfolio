@@ -41,7 +41,9 @@ export const Contact = () => {
         !process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID ||
         !process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
       ) {
-        throw new Error(error);
+        throw new Error(
+          "EmailJS configuration is missing. Please check environment variables."
+        );
       }
 
       // Create template parameters
@@ -59,14 +61,13 @@ export const Contact = () => {
         process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
       );
 
-      if (!res) throw new Error("Failed to send message!");
       setSuccess("Message sent successfully!");
       setForm({ name: "", email: "", message: "" });
+      alert("Thank you. I will get back to you as soon as possible.");
     } catch (error) {
       setError("Failed to send message. Please try again later.");
     } finally {
       setLoading(false);
-      alert("Thank you. I will get back to you as soon as possible.");
     }
   };
 

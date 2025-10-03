@@ -3,8 +3,9 @@ import ArrowDown from "@/assets/icons/arrow-down.svg";
 import grainImage from "@/assets/images/grain.jpg";
 import StarIcon from "@/assets/icons/star.svg";
 import SparkleIcon from "@/assets/icons/sparkle.svg";
+import DeconstructedRobot from "@/assets/images/deconstructed-robot-dark.svg";
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import { HeroOrbit } from "@/components/HeroOrbit";
-import { Contact } from "./Contact";
 
 export const Hero = () => {
   return (
@@ -108,6 +109,11 @@ export const Hero = () => {
       </div>
       {/* content */}
       <div className="container">
+        {/*<div className="flex flex-col items-center z-10">
+          <DeconstructedRobot className="w-[300px]" />
+          <span className="text-white/60 font-mono">I&apos;m a</span>{" "}
+          <span className="text-emerald-300 font-mono">copilot</span>
+        </div>*/}
         <div className="flex flex-col items-center">
           <span className="font-serif text-3xl md:text-5xl text-center mt-8 tracking-wide">
             Hi there, I&apos;m -

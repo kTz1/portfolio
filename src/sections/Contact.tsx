@@ -1,12 +1,14 @@
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
 import grainImage from "@/assets/images/grain.jpg";
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 
 export const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState("");
   const [error, setError] = useState("");
+  const [showSuccessAnimation, setShowSuccessAnimation] = useState(false);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -61,9 +63,9 @@ export const Contact = () => {
         process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
       );
 
-      setSuccess("Message sent successfully!");
+      //setSuccess("Message sent successfully!");
       setForm({ name: "", email: "", message: "" });
-      alert("Thank you. I will get back to you as soon as possible.");
+      setShowSuccessAnimation(true);
     } catch (error) {
       setError("Failed to send message. Please try again later.");
     } finally {
@@ -95,89 +97,105 @@ export const Contact = () => {
           </div>
         </div>
 
-        <form
-          onSubmit={handleSubmit}
-          className="space-y-6 max-w-2xl mx-auto mt-8 p-8 rounded-3xl shadow-2xl bg-gray-800"
-          aria-label="Contact form"
-        >
-          <div>
-            <label htmlFor="name" className="block mb-1 font-medium">
-              Name
-            </label>
-            <input
-              id="name"
-              name="name"
-              type="text"
-              autoComplete="name"
-              value={form.name}
-              onChange={handleChange}
-              required
-              aria-required="true"
-              aria-invalid={!!error && !form.name}
-              placeholder="John Doe"
-              className="w-full px-4 py-2 bg-white border border-gray-600 rounded-lg text-black placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:border-transparent transition-colors"
+        {showSuccessAnimation ? (
+          <div className="space-y-6 max-w-2xl mx-auto mt-8 p-8 rounded-lg shadow-2xl bg-gray-800 text-center">
+            <DotLottieReact
+              src="https://lottie.host/7a3db289-15ee-4fd3-a3d0-1f0f0797efe4/JysRmAuoNt.lottie"
+              loop
+              autoplay
+              className="size-lg mx-auto mb-4"
             />
+            <p className="font-semibold text-white text-lg">
+              Thank you for your message! I will get back to you as soon as
+              possible.
+            </p>
           </div>
-          <div>
-            <label htmlFor="email" className="block mb-1 font-medium">
-              Email
-            </label>
-            <input
-              id="email"
-              name="email"
-              type="email"
-              autoComplete="email"
-              value={form.email}
-              onChange={handleChange}
-              required
-              aria-required="true"
-              aria-invalid={
-                !!error &&
-                (!form.email || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(form.email))
-              }
-              placeholder="johndoe@email.com"
-              className="w-full px-4 py-2 bg-white border border-gray-600 rounded-lg text-black placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:border-transparent transition-colors"
-            />
-          </div>
-          <div>
-            <label htmlFor="message" className="block mb-1 font-medium">
-              Message
-            </label>
-            <textarea
-              id="message"
-              name="message"
-              rows={5}
-              value={form.message}
-              onChange={handleChange}
-              required
-              aria-required="true"
-              aria-invalid={!!error && !form.message}
-              placeholder="Your message here..."
-              className="w-full px-4 py-2 bg-white border border-gray-600 rounded-lg text-black placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:border-transparent transition-colors resize-none"
-            />
-          </div>
-
-          {error && (
-            <div className="text-red-600" role="alert">
-              {error}
+        ) : (
+          <form
+            onSubmit={handleSubmit}
+            className="space-y-6 max-w-2xl mx-auto mt-8 p-8 rounded-3xl shadow-2xl bg-gray-800"
+            aria-label="Contact form"
+          >
+            <div>
+              <label htmlFor="name" className="block mb-1 font-medium">
+                Name
+              </label>
+              <input
+                id="name"
+                name="name"
+                type="text"
+                autoComplete="name"
+                value={form.name}
+                onChange={handleChange}
+                required
+                aria-required="true"
+                aria-invalid={!!error && !form.name}
+                placeholder="John Doe"
+                className="w-full px-4 py-2 bg-white border border-gray-600 rounded-lg text-black placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:border-transparent transition-colors"
+              />
             </div>
-          )}
-          {success && (
-            <div className="text-green-600" role="status">
-              {success}
+            <div>
+              <label htmlFor="email" className="block mb-1 font-medium">
+                Email
+              </label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                autoComplete="email"
+                value={form.email}
+                onChange={handleChange}
+                required
+                aria-required="true"
+                aria-invalid={
+                  !!error &&
+                  (!form.email ||
+                    !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(form.email))
+                }
+                placeholder="johndoe@email.com"
+                className="w-full px-4 py-2 bg-white border border-gray-600 rounded-lg text-black placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:border-transparent transition-colors"
+              />
             </div>
-          )}
+            <div>
+              <label htmlFor="message" className="block mb-1 font-medium">
+                Message
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                rows={5}
+                value={form.message}
+                onChange={handleChange}
+                required
+                aria-required="true"
+                aria-invalid={!!error && !form.message}
+                placeholder="Your message here..."
+                className="w-full px-4 py-2 bg-white border border-gray-600 rounded-lg text-black placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:border-transparent transition-colors resize-none"
+              />
+            </div>
 
-          <div className="flex justify-center items-center">
-            <button
-              type="submit"
-              disabled={loading}
-              className="min-w-[200px]  text-black bg-white py-3 rounded-lg font-semibold disabled:opacity-50 disabled:cursor-not-allowed transition-colors "
-            >
-              {loading ? "Sending..." : "Send Message"}
-            </button>
-          </div>
-        </form>
+            {error && (
+              <div className="text-red-600" role="alert">
+                {error}
+              </div>
+            )}
+            {success && (
+              <div className="text-green-600" role="status">
+                {success}
+              </div>
+            )}
+
+            <div className="flex justify-center items-center">
+              <button
+                type="submit"
+                disabled={loading}
+                className="min-w-[200px]  text-black bg-white py-3 rounded-lg font-semibold disabled:opacity-50 disabled:cursor-not-allowed transition-colors "
+              >
+                {loading ? "Sending..." : "Send Message"}
+              </button>
+            </div>
+          </form>
+        )}
       </div>
     </div>
   );

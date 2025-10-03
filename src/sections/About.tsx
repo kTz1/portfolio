@@ -1,22 +1,16 @@
 "use client";
 
-import { useRef } from "react";
+import Image from "next/image";
 import { SectionHeader } from "@/components/SectionHeader";
 import { Card } from "@/components/Card";
 import curriculumVitae from "@/assets/images/cv.png";
-import Image from "next/image";
 import { toolboxItems } from "@/constants/index";
-import { hobbies } from "@/constants/index";
-import mapImage from "@/assets/images/map.png";
-import smileMemoji from "@/assets/images/memoji-smile.png";
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import DownloadIcon from "@/assets/icons/download.svg";
 import { CardHeader } from "@/components/CardHeader";
 import { ToolboxItems } from "@/components/ToolboxItems";
-import { motion } from "framer-motion";
 
 export const About = () => {
-  const constraintRef = useRef(null);
-
   return (
     <div className="py-20 lg:py-28 mt-20" id="about">
       <div className="container">
@@ -30,8 +24,8 @@ export const About = () => {
           <Card className="h-[320px] p-0 flex flex-col md:col-span-3 lg:col-span-2">
             <CardHeader
               title="Beyond the Code"
-              description="Explore my interests and hobbies beyond the digital realm."
-              className="px-6 py-6"
+              description="Beyond the code, I'm someone who's driven by curiosity and creativity. I enjoy learning new things every day, solving real problems, and turning ideas into digital experiences that people can actually use. For me, development isn't just about writing clean code — it's about creating impact, improving experiences, and helping ideas grow. I like exploring design trends, discovering new technologies, and continuously challenging myself to think differently. I'm always open to collaboration, new projects, and opportunities that let me grow both as a developer and as a person."
+              className="text-justify"
             />
           </Card>
 
@@ -68,12 +62,20 @@ export const About = () => {
 
         <div className="flex flex-col gap-8 mt-8">
           <div className="grid grid-cols-1 gap-8">
-            <Card className="h-[320px] md:col-span-3 lg:col-span-2">
+            <Card className="h-[320px] md:col-span-3 lg:col-span-2 relative">
               <CardHeader
                 title="My Toolbox"
                 description="Explore the technologies and tools I use to craft exceptional
                 digital experiences."
               />
+              <div className="absolute lg:block md:block hidden top-[-20px] right-[-10px]">
+                <DotLottieReact
+                  src="https://lottie.host/87f19efb-942e-4604-8f32-bfd353fd249f/GLGukMpeSF.lottie"
+                  loop
+                  autoplay
+                  className="size-44"
+                />
+              </div>
               <ToolboxItems
                 items={toolboxItems}
                 className="mt-6"

@@ -1,6 +1,5 @@
 import { PropsWithChildren } from "react";
 import { twMerge } from "tailwind-merge";
-import DeconstructedRobot from "@/assets/images/deconstructed-robot-dark.svg";
 
 export const HeroOrbit = ({
   children,

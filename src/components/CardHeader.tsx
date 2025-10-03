@@ -13,7 +13,7 @@ export const CardHeader = ({
   return (
     <div
       className={twMerge(
-        "flex flex-col p-6 md:py-6 md:px-6 sm:py-4 sm:px-4",
+        "flex flex-col p-6 md:py-6 md:px-6 sm:py-4 sm:px-4 text-center",
         className
       )}
     >

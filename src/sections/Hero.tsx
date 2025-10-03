@@ -13,7 +13,7 @@ export const Hero = () => {
       className="py-32 md:py-48 lg:py-60 relative z-0 overflow-x-clip"
       id="home"
     >
-      <div className="absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_70%,transparent)]">
+      <div className="absolute inset-0 mask-[linear-gradient(to_bottom,transparent,black_70%,transparent)]">
         {/* background image */}
         <div
           className="absolute inset-0 -z-30 opacity-5"
@@ -118,7 +118,7 @@ export const Hero = () => {
           <span className="font-serif text-3xl md:text-5xl text-center mt-8 tracking-wide">
             Hi there, I&apos;m -
           </span>
-          <h1 className="font-bold text-6xl md:text-8xl text-center mt-4 bg-gradient-to-r from-emerald-300 to-sky-400 bg-clip-text text-transparent">
+          <h1 className="font-bold text-6xl md:text-8xl text-center mt-4 bg-linear-to-r from-emerald-300 to-sky-400 bg-clip-text text-transparent">
             Catalin Simon
           </h1>
         </div>

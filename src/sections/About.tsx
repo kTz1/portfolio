@@ -24,8 +24,8 @@ export const About = () => {
           <Card className="h-[320px] p-0 flex flex-col md:col-span-3 lg:col-span-2">
             <CardHeader
               title="Beyond the Code"
-              description="Beyond the code, I'm someone who's driven by curiosity and creativity. I enjoy learning new things every day, solving real problems, and turning ideas into digital experiences that people can actually use. For me, development isn't just about writing clean code — it's about creating impact, improving experiences, and helping ideas grow. I like exploring design trends, discovering new technologies, and continuously challenging myself to think differently. I'm always open to collaboration, new projects, and opportunities that let me grow both as a developer and as a person."
-              className="text-justify"
+              description="I enjoy learning new things every day, solving real problems, and turning ideas into digital experiences that people can actually use. For me, development isn't just about writing clean code — it's about creating impact, improving experiences, and helping ideas grow. I like exploring design trends, discovering new technologies, and continuously challenging myself to think differently. I'm always open to collaboration, new projects, and opportunities that let me grow both as a developer and as a person."
+              className=""
             />
           </Card>
 
@@ -35,10 +35,13 @@ export const About = () => {
               description="Dive into my professional journey, skills, and experiences."
               className="py-6 md:py-6 px-6 md:px-6"
             />
-            <div className="w-20 mx-auto md:mt-0">
-              <Image
-                src={curriculumVitae}
-                alt="Curriculum vitae preview (PDF)"
+            <div className="flex justify-center">
+              <DotLottieReact
+                src="https://lottie.host/951d41a1-90c9-4e52-bea1-c65335a84f58/yxv2k0dhOU.lottie"
+                loop
+                autoplay
+                className="size-28"
+                aria-hidden="true"
               />
             </div>
 
@@ -47,7 +50,7 @@ export const About = () => {
                 href="/resume.pdf"
                 download
                 aria-label="Download my curriculum vitae (PDF)"
-                className="inline-flex items-center gap-2 border border-white bg-white text-gray-900 h-10 px-6 rounded-xl mt-4"
+                className="inline-flex items-center gap-2 border border-white bg-white text-gray-900 h-8 px-4 rounded-xl mt-4 lg:mt-2"
               >
                 <DownloadIcon
                   className="size-6"
@@ -74,6 +77,7 @@ export const About = () => {
                   loop
                   autoplay
                   className="size-44"
+                  aria-hidden="true"
                 />
               </div>
               <ToolboxItems

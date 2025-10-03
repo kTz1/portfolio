@@ -26,7 +26,7 @@ export const Projects = () => {
             >
               <div className="lg:grid lg:grid-cols-2 lg:gap-16">
                 <div className="lg:pb-16">
-                  <div className="bg-linear-to-r from-emerald-300 to-sky-400 inline-flex gap-2 font-bold uppercase tracking-widest text-sm text-transparent bg-clip-text">
+                  <div className="bg-gradient-to-r from-emerald-300 to-sky-400 inline-flex gap-2 font-bold uppercase tracking-widest text-sm text-transparent bg-clip-text">
                     <span>{project.company}</span>
                     <span>&bull;</span>
                     <span>{project.year}</span>
@@ -37,7 +37,7 @@ export const Projects = () => {
                   </h3>
 
                   <hr className="border-t-2 border-white/5 mt-4 md:mt-5" />
-                  <p className="flex flex-col gap-4 mt-4 md:mt-5 lg:h-32 text-ellipsis">
+                  <p className="flex flex-col gap-4 mt-4 md:mt-5 lg:h-32">
                     {project.description}
                   </p>
 

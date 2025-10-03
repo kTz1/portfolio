@@ -73,7 +73,7 @@ export const Contact = () => {
   return (
     <div className="py-16 pt-12 lg:py-24 lg:pt-20" id="contact">
       <div className="container">
-        <div className="flex flex-col items-center bg-linear-to-r from-emerald-300 to-sky-400 text-gray-900 py-8 px-10 rounded-3xl md:text-left relative overflow-hidden z-0">
+        <div className="flex flex-col items-center bg-gradient-to-r from-emerald-300 to-sky-400 text-gray-900 py-8 px-10 rounded-3xl md:text-left relative overflow-hidden z-0">
           <div
             className="absolute inset-0 opacity-5 -z-10"
             style={{
@@ -128,7 +128,7 @@ export const Contact = () => {
                 aria-required="true"
                 aria-invalid={!!error && !form.name}
                 placeholder="John Doe"
-                className="w-full px-4 py-2 bg-white border border-gray-600 rounded-lg text-black placeholder-gray-400 focus:outline-hidden focus:ring-2 focus:ring-emerald-400 focus:border-transparent transition-colors"
+                className="w-full px-4 py-2 bg-white border border-gray-600 rounded-lg text-black placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:border-transparent transition-colors"
               />
             </div>
             <div>
@@ -150,7 +150,7 @@ export const Contact = () => {
                     !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(form.email))
                 }
                 placeholder="johndoe@email.com"
-                className="w-full px-4 py-2 bg-white border border-gray-600 rounded-lg text-black placeholder-gray-400 focus:outline-hidden focus:ring-2 focus:ring-emerald-400 focus:border-transparent transition-colors"
+                className="w-full px-4 py-2 bg-white border border-gray-600 rounded-lg text-black placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:border-transparent transition-colors"
               />
             </div>
             <div>

@@ -118,7 +118,7 @@ export const Hero = () => {
           <span className="font-serif text-3xl md:text-5xl text-center mt-8 tracking-wide">
             Hi there, I&apos;m -
           </span>
-          <h1 className="font-bold text-6xl md:text-8xl text-center mt-4 bg-linear-to-r from-emerald-300 to-sky-400 bg-clip-text text-transparent">
+          <h1 className="font-bold text-6xl md:text-8xl text-center mt-4 bg-gradient-to-r from-emerald-300 to-sky-400 bg-clip-text text-transparent">
             Catalin Simon
           </h1>
         </div>

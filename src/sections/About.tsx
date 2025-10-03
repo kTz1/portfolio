@@ -1,9 +1,7 @@
 "use client";
 
-import Image from "next/image";
 import { SectionHeader } from "@/components/SectionHeader";
 import { Card } from "@/components/Card";
-import curriculumVitae from "@/assets/images/cv.png";
 import { toolboxItems } from "@/constants/index";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import DownloadIcon from "@/assets/icons/download.svg";
@@ -35,16 +33,6 @@ export const About = () => {
               description="Dive into my professional journey, skills, and experiences."
               className="py-6 md:py-6 px-6 md:px-6"
             />
-            <div className="flex justify-center">
-              <DotLottieReact
-                src="https://lottie.host/951d41a1-90c9-4e52-bea1-c65335a84f58/yxv2k0dhOU.lottie"
-                loop
-                autoplay
-                className="size-28"
-                aria-hidden="true"
-              />
-            </div>
-
             <div className="flex justify-center">
               <a
                 href="/resume.pdf"

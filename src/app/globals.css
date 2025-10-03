@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @utility container {
   margin-inline: auto;
@@ -6,6 +6,7 @@
   @media (width >= theme(--breakpoint-md)) {
     padding-inline: 2rem;
   }
+  @apply lg:max-w-5xl;
 }
 
 @theme {
@@ -62,10 +63,6 @@
   ::file-selector-button {
     border-color: var(--color-gray-200, currentcolor);
   }
-}
-
-@utility container {
-  @apply lg:max-w-5xl;
 }
 
 @layer base {

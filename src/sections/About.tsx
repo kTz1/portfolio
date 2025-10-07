@@ -23,16 +23,24 @@ export const About = () => {
             <CardHeader
               title="Beyond the Code"
               description="I enjoy learning new things every day, solving real problems, and turning ideas into digital experiences that people can actually use. For me, development isn't just about writing clean code — it's about creating impact, improving experiences, and helping ideas grow. I like exploring design trends, discovering new technologies, and continuously challenging myself to think differently. I'm always open to collaboration, new projects, and opportunities that let me grow both as a developer and as a person."
-              className=""
             />
           </Card>
 
-          <Card className="h-[320px] md:col-span-2 lg:col-span-1">
+          <Card className="relative h-[320px] md:col-span-2 lg:col-span-1">
             <CardHeader
               title="My Resume"
               description="Dive into my professional journey, skills, and experiences."
               className="py-6 md:py-6 px-6 md:px-6"
             />
+            <div className="flex justify-center">
+              <DotLottieReact
+                src="https://lottie.host/951d41a1-90c9-4e52-bea1-c65335a84f58/yxv2k0dhOU.lottie"
+                loop
+                autoplay
+                className="size-28"
+                aria-hidden="true"
+              />
+            </div>
             <div className="flex justify-center">
               <a
                 href="/resume.pdf"

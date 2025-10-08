@@ -3,14 +3,13 @@ import ArrowDown from "@/assets/icons/arrow-down.svg";
 import grainImage from "@/assets/images/grain.jpg";
 import StarIcon from "@/assets/icons/star.svg";
 import SparkleIcon from "@/assets/icons/sparkle.svg";
-import DeconstructedRobot from "@/assets/images/deconstructed-robot-dark.svg";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import { HeroOrbit } from "@/components/HeroOrbit";
 
 export const Hero = () => {
   return (
     <div
-      className="py-32 md:py-48 lg:py-60 relative z-0 overflow-x-clip"
+      className="py-24 md:py-40 lg:py-20 relative z-0 overflow-x-clip"
       id="home"
     >
       <div className="absolute inset-0 mask-[linear-gradient(to_bottom,transparent,black_70%,transparent)]">
@@ -107,43 +106,84 @@ export const Hero = () => {
           <StarIcon className="size-28 text-emerald-300" />
         </HeroOrbit>
       </div>
+
       {/* content */}
-      <div className="container">
-        {/*<div className="flex flex-col items-center z-10">
-          <DeconstructedRobot className="w-[300px]" />
-          <span className="text-white/60 font-mono">I&apos;m a</span>{" "}
-          <span className="text-emerald-300 font-mono">copilot</span>
-        </div>*/}
-        <div className="flex flex-col items-center">
-          <span className="font-serif text-3xl md:text-5xl text-center mt-8 tracking-wide">
-            Hi there, I&apos;m -
-          </span>
-          <h1 className="font-bold text-6xl md:text-8xl text-center mt-4 bg-gradient-to-r from-emerald-300 to-sky-400 bg-clip-text text-transparent">
-            Catalin Simon
-          </h1>
-        </div>
+      <div className="container lg:max-w-6xl lg:mx-auto">
+        <div className="relative lg:grid lg:grid-cols-2 lg:gap-8">
+          {/* Text Content - Left side on large screens, top on smaller screens */}
+          <div className="flex flex-col items-center justify-center">
+            <h3 className="font-serif text-3xl md:text-4xl text-center mt-8 tracking-wide">
+              Hi there, I&apos;m -
+            </h3>
+            <h1 className="font-bold text-5xl md:text-7xl text-center mt-4 bg-gradient-to-r from-emerald-300 to-sky-400 bg-clip-text text-transparent">
+              Catalin Simon
+            </h1>
 
-        <div className="max-w-lg mx-auto">
-          <p className="mt-4 text-center text-white/60 md:text-lg">
-            <b>Self-taught developer</b> and <b>freelancer</b> with a strong
-            passion for learning and building practical solutions.
-          </p>
-        </div>
-
-        <div className="flex justify-center mt-6 mb-6">
-          <div className="bg-gray-950 border border-gray-800 px-4 py-1.5 inline-flex items-center gap-4 rounded-lg">
-            <div className="bg-green-500 size-2.5 rounded-full relative">
-              <div className="bg-green-500 absolute inset-0 rounded-full animate-ping-large"></div>
+            <div className="max-w-lg mt-4">
+              <p className="mt-4 text-center  text-white/60 md:text-lg">
+                <b>Self-taught developer</b> and <b>freelancer</b> with a strong
+                passion for learning and building practical solutions.
+              </p>
             </div>
-            <div className="text-sm font-medium">
-              Available for new projects
+
+            <div className="mt-6 mb-6 sm:mb-2">
+              <div className="bg-gray-950 border border-gray-800 px-4 py-1.5 inline-flex items-center gap-4 rounded-lg">
+                <div className="bg-green-500 size-2.5 rounded-full relative">
+                  <div className="bg-green-500 absolute inset-0 rounded-full animate-ping-large"></div>
+                </div>
+                <div className="text-sm font-medium">
+                  Available for new projects
+                </div>
+              </div>
+            </div>
+
+            {/* Buttons for large screens */}
+            <div className="hidden lg:flex items-center gap-4 mt-8">
+              <button
+                className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl"
+                onClick={() =>
+                  document
+                    .getElementById("projects")
+                    ?.scrollIntoView({ behavior: "smooth" })
+                }
+              >
+                <span className="font-semibold">My Work</span>
+                <ArrowDown className="size-4 animate-bounce" />
+              </button>
+
+              <button
+                type="button"
+                className="inline-flex items-center gap-2 border border-white bg-white text-gray-900 h-12 px-6 rounded-xl"
+                onClick={() =>
+                  document
+                    .getElementById("contact")
+                    ?.scrollIntoView({ behavior: "smooth" })
+                }
+              >
+                <ContactIcon className="size-6" />
+                <span className="font-semibold">Contact</span>
+              </button>
             </div>
           </div>
+
+          {/* Animation - Right side on large screens, below text on smaller screens */}
+          <div className="relative lg:static mt-2 flex justify-center">
+            {/*<div className="w-full max-w-[200px] sm:max-w-xl md:max-w-[400px] lg:max-w-[500px] mx-auto">*/}
+            <DotLottieReact
+              src="https://lottie.host/70c23966-0c60-4f23-b005-697bc6a2aa0c/c5DoKva9eK.lottie"
+              loop
+              autoplay
+              className="size-[400px] sm:size-[250px] md:size-[400px] lg:size-[600px]"
+              aria-hidden="true"
+            />
+          </div>
+          {/*</div>*/}
         </div>
 
-        <div className="flex flex-col md:flex-row justify-center items-center absolute inset-x-0 gap-4">
+        {/* Buttons for small/medium screens */}
+        <div className="lg:hidden flex flex-col sm:flex-row justify-center items-center gap-4 mt-8 mb-8">
           <button
-            className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl mt-4"
+            className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl"
             onClick={() =>
               document
                 .getElementById("projects")
@@ -156,7 +196,7 @@ export const Hero = () => {
 
           <button
             type="button"
-            className="inline-flex items-center gap-2 border border-white bg-white text-gray-900 h-12 px-6 rounded-xl mt-4"
+            className="inline-flex items-center gap-2 border border-white bg-white text-gray-900 h-12 px-6 rounded-xl"
             onClick={() =>
               document
                 .getElementById("contact")

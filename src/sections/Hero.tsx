@@ -5,6 +5,7 @@ import StarIcon from "@/assets/icons/star.svg";
 import SparkleIcon from "@/assets/icons/sparkle.svg";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import { HeroOrbit } from "@/components/HeroOrbit";
+import HeroButtons from "@/components/HeroButtons";
 
 export const Hero = () => {
   return (
@@ -120,7 +121,7 @@ export const Hero = () => {
             </h1>
 
             <div className="max-w-lg mt-4">
-              <p className="mt-4 text-center  text-white/60 md:text-lg">
+              <p className="mt-4 text-center text-white/60 md:text-lg">
                 <b>Self-taught developer</b> and <b>freelancer</b> with a strong
                 passion for learning and building practical solutions.
               </p>
@@ -137,38 +138,11 @@ export const Hero = () => {
               </div>
             </div>
 
-            {/* Buttons for large screens */}
-            <div className="hidden lg:flex items-center gap-4 mt-8">
-              <button
-                className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl"
-                onClick={() =>
-                  document
-                    .getElementById("projects")
-                    ?.scrollIntoView({ behavior: "smooth" })
-                }
-              >
-                <span className="font-semibold">My Work</span>
-                <ArrowDown className="size-4 animate-bounce" />
-              </button>
-
-              <button
-                type="button"
-                className="inline-flex items-center gap-2 border border-white bg-white text-gray-900 h-12 px-6 rounded-xl"
-                onClick={() =>
-                  document
-                    .getElementById("contact")
-                    ?.scrollIntoView({ behavior: "smooth" })
-                }
-              >
-                <ContactIcon className="size-6" />
-                <span className="font-semibold">Contact</span>
-              </button>
-            </div>
+            {/* Large screens */}
+            <HeroButtons className="hidden lg:flex items-center gap-4 mt-8" />
           </div>
-
           {/* Animation - Right side on large screens, below text on smaller screens */}
           <div className="relative lg:static mt-2 flex justify-center">
-            {/*<div className="w-full max-w-[200px] sm:max-w-xl md:max-w-[400px] lg:max-w-[500px] mx-auto">*/}
             <DotLottieReact
               src="https://lottie.host/70c23966-0c60-4f23-b005-697bc6a2aa0c/c5DoKva9eK.lottie"
               loop
@@ -177,35 +151,9 @@ export const Hero = () => {
               aria-hidden="true"
             />
           </div>
-          {/*</div>*/}
-        </div>
 
-        {/* Buttons for small/medium screens */}
-        <div className="lg:hidden flex flex-col sm:flex-row justify-center items-center gap-4 mt-8 mb-8">
-          <button
-            className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl"
-            onClick={() =>
-              document
-                .getElementById("projects")
-                ?.scrollIntoView({ behavior: "smooth" })
-            }
-          >
-            <span className="font-semibold">My Work</span>
-            <ArrowDown className="size-4 animate-bounce" />
-          </button>
-
-          <button
-            type="button"
-            className="inline-flex items-center gap-2 border border-white bg-white text-gray-900 h-12 px-6 rounded-xl"
-            onClick={() =>
-              document
-                .getElementById("contact")
-                ?.scrollIntoView({ behavior: "smooth" })
-            }
-          >
-            <ContactIcon className="size-6" />
-            <span className="font-semibold">Contact</span>
-          </button>
+          {/* Small/medium screens */}
+          <HeroButtons className="lg:hidden flex flex-col sm:flex-row justify-center items-center gap-4 mt-8 mb-8" />
         </div>
       </div>
     </div>

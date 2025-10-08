@@ -18,8 +18,8 @@ export const About = () => {
           description="Learn more about who I am, what I do, and what inspires me."
         />
         {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-5 lg:grid-cols-3 gap-8 mt-20">
-          <Card className="h-[320px] p-0 flex flex-col md:col-span-3 lg:col-span-2">
+        <div className="grid grid-cols-1 md:grid-cols-5 lg:grid-cols-3 gap-8 mt-10">
+          <Card className="h-[320px] p-2 flex flex-col md:col-span-3 lg:col-span-2">
             <CardHeader
               title="Beyond the Code"
               description="I enjoy learning new things every day, solving real problems, and turning ideas into digital experiences that people can actually use. For me, development isn't just about writing clean code — it's about creating impact, improving experiences, and helping ideas grow. I like exploring design trends, discovering new technologies, and continuously challenging myself to think differently. I'm always open to collaboration, new projects, and opportunities that let me grow both as a developer and as a person."
